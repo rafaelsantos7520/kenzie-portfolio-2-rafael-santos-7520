@@ -8,37 +8,56 @@ import {
 } from "./style";
 
 import { Text } from "@/styles/Text";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
 
 interface ReposType {
   id: number;
   name: string;
   language: string;
   description: string;
-  html_url: string;
+  html_url?: string;
   homepage: string;
 }
 
 export const Project = (): JSX.Element => {
-  const [repositories, setRepositories] = useState<ReposType[]>([]);
+  const projetos = [
+    {
+      id: 1,
+      name: "MotorsShop",
+      language: "TypeScript",
+      description: "Loja de carros online",
+      html_url: "https://motorshoponline.netlify.app/",
+      homepage: "https://github.com/E-Commerce-M6/front_end"
+    }
+  ]
+  const [repositories] = useState<ReposType[]>([
+    {
+      id: 1,
+      name: "MotorsShop",
+      language: "TypeScript",
+      description: "Loja de carros online",
+      html_url: "https://motorshoponline.netlify.app/",
+      homepage: "https://github.com/E-Commerce-M6/front_end"
+    },
+    {
+      id: 2,
+      name: "Hamburgeria",
+      language: "JavaScript",
+      description: "Site de compras de lanches",
+      html_url: "https://hamburgeria-livid.vercel.app/",
+      homepage: "https://github.com/rafaelsantos7520/hamburgeria"
+    },
+    {
+    id: 3,
+    name: "Kenzie hub",
+    language: "TypeScript",
+    description: "Site De cadastro de tecnologias",
+    html_url: "https://vercel.com/rafaelsantos7520/kenzie-hub",
+    homepage: "https://github.com/rafaelsantos7520/Kenzie-Hub"
+    }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
-      );
-
-      const json = await data.json();
-
-      setRepositories(json);
-
-      return json;
-    };
-
-    fetchData();
-  }, []);
+  ]);
 
   return (
     <>
@@ -77,13 +96,13 @@ export const Project = (): JSX.Element => {
               {repository.description?.substring(0, 129)}
             </Text>
             <ProjectLinks>
-              <ProjectLink target="_blank" href={repository.html_url}>
+              <ProjectLink target="_blank" href={repository.homepage}>
                 <FaGithub /> Github Code
               </ProjectLink>
               {repository.homepage && (
                 <ProjectLink
                   target="_blank"
-                  href={`https://${repository.homepage}`}
+                  href={repository.html_url}
                 >
                   <FaShare /> See demo
                 </ProjectLink>
