@@ -44,29 +44,45 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
+              <Text color="grey4">Olá Mundo!</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            I{" "}
+              Eu{" "}
               <Text as="span" type="heading1" color="brand1">
-                love
+                Amo
               </Text>{" "}
-              creating and{" "}
+              criar e {" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                Desenvolver
               </Text>{" "}
-              projects
+              projetos
             </Text>
             <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+              desenvolvedor web e adoro programar e desenvolver aplicações. Sou
+              um entusiasta da tecnologia e acredito que ela tem o poder de
+              transformar o mundo em um lugar melhor. Amo games, animes e sou um
+              grande apreciador de café. Como desenvolvedor web, tenho me
+              dedicado a criar soluções inovadoras e eficientes para os desafios
+              tecnológicos que surgem. Tenho experiência em diversas linguagens
+              de programação, como HTML, CSS, JavaScript e Python além de
+              trabalhar com frameworks populares como React. Além do meu amor
+              pela programação, sou apaixonado por games e animes. Acredito que
+              essas formas de entretenimento são verdadeiras obras de arte
+              interativas, capazes de inspirar e conectar pessoas de diferentes
+              origens e culturas. E para me manter inspirado e produtivo, o café
+              é o meu combustível. Se você quiser saber mais sobre mim ou
+              discutir algum projeto interessante, fique à vontade para me
+              chamar para um bate papo. Estou sempre em busca de novos desafios
+              e animado com as possibilidades que a tecnologia oferece. Vamos
+              trabalhar juntos para tornar o mundo um lugar melhor através da
+              inovação e do poder transformador da tecnologia.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
+                Ver projetos
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+                Codigo do meu Portifólio
               </Button>
               <Button
                 color="grey5"
@@ -92,13 +108,10 @@ export const Home = (): JSX.Element => {
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
-                My projects
+                Meus projetos
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
-                <Text as="span" color="brand5">
-                  side projects
-                </Text>
+                Aqui estão alguns dos meus projetos{" "}
               </Text>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
